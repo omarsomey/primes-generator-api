@@ -28,7 +28,11 @@ public class PrimesLoggerService {
 
 
     public PrimesLoggerService() {
-        this.primes = SieveOfEratosthenes(); // Create the ArrayList of primes between 1 and max_size ONCE at the start of the application
+        // Create the ArrayList of primes between 1 and max_size ONCE at the start
+        // of the application to save Time Complexity for the server.
+        // this method will be called once and then we use a simple Binarysearch to get the primes.
+
+        this.primes = SieveOfEratosthenes();
     }
 
     /**
